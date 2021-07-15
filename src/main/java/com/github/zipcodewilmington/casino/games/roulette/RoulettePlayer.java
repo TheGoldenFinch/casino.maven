@@ -12,6 +12,10 @@ public class RoulettePlayer implements GamblingPlayer {
         this.player = player;
     }
 
+    public void createRoulettePlayer(Player player){
+        this.player = player;
+    }
+
     @Override
     public CasinoAccount getArcadeAccount() {
         return null;
@@ -37,11 +41,12 @@ public class RoulettePlayer implements GamblingPlayer {
     @Override
     public float amountWagered() {
 
-        return 0;
+        return player.getCurrentBet();
     }
 
     @Override
     public float amountWon() {
+
         return 0;
     }
 
@@ -55,5 +60,8 @@ public class RoulettePlayer implements GamblingPlayer {
     }
 
 
+    }
 
-}
+
+
+
